@@ -1,0 +1,47 @@
+{% if car %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Marque
+                </th>
+                <th>
+                    Modèle
+                </th>
+                <th>
+                    Année de construction
+                </th>
+                <th>
+                    Cylindré
+                </th>
+                <th>
+                    Version
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {{ car.marque }}
+                </td>
+                <td>
+                    {{ car.modele }}
+                </td>
+                <td>
+                    {{ car.annee_construction }}
+                </td>
+                <td>
+                    {{ car.cylindree }}
+                </td>
+                <td>
+                    {{ car.version }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <a href="/app/">Retour</a>
+    </div>
+{% else %}
+    <p>Cette voiture n'existe pas.</p>
+{% endif %}
