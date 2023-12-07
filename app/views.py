@@ -11,6 +11,6 @@ def detail(request, car_id):
 
 
 def index(request):
-    latest_car_list = Car.objects.order_by('-id')[:5]
-    context = {'latest_car_list': latest_car_list}
+    car_list = Car.objects.all()
+    context = {'car_list': car_list}
     return render(request, 'app/index.html', context)
