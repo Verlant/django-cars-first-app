@@ -4,10 +4,13 @@ from django.shortcuts import render
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Car
+from .forms import CarForm
 
 
 def details(request, car_id):
-    return HttpResponse("You're looking at car %s." % car_id)
+    car = Car.objects.get(id=car_id)
+    context = {'car': car}
+    return render(request, 'app/details.html', context)
 
 
 def index(request):
