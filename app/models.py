@@ -14,6 +14,8 @@ from django.db import models
 #     def was_published_recently(self):
 #         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 # Create your models here.
+
+
 class Car(models.Model):
     marque = models.CharField(max_length=200)
     model = models.CharField(max_length=200)
