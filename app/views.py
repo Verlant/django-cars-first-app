@@ -7,6 +7,16 @@ from .models import Car
 from .forms import CarForm
 
 
+def car(request):
+    if request.method == 'POST':
+        form = CarForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = CarForm()
+    return render(request, 'app/cars.html', {'form': form})
+
+
 def details(request, car_id):
     car = Car.objects.get(id=car_id)
     context = {'car': car}
