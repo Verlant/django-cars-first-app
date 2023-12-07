@@ -18,10 +18,10 @@ from django.db import models
 
 class Car(models.Model):
     marque = models.CharField(max_length=200)
-    model = models.CharField(max_length=200)
+    modele = models.CharField(max_length=200)
     annee_construction = models.DateField('annee_construction')
     cylindree = models.CharField(max_length=200)
     version = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.marque + " " + self.model
+        return self.marque + " " + self.modele
