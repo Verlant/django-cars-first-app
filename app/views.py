@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from .models import Car
 
 
-def detail(request, car_id):
+def details(request, car_id):
     return HttpResponse("You're looking at car %s." % car_id)
 
 
